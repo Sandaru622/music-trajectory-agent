@@ -140,19 +140,56 @@ Final AI Report
 
 ## Installation
 
-Install dependencies:
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/your-username/music-trajectory-agent.git
+cd music-trajectory-agent
+```
+
+### 2. Create a virtual environment (Optional but Recommended)
+
+**Windows**
+
+```bash
+python -m venv .venv
+.venv\Scripts\activate
+```
+
+**macOS / Linux**
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+```
+
+### 3. Install dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-Run the application:
+### 4. Configure API Keys
+
+Create a `.env` file or configure **Streamlit Secrets** with your API keys.
+
+
+```text
+GROQ_API_KEY=your_groq_api_key
+OPENROUTER_API_KEY=your_openrouter_api_key
+```
+
+### 5. Run the application
 
 ```bash
 streamlit run app.py
 ```
 
----
+The application will open in your default browser at:
+
+```
+http://localhost:8501
+```
 
 ## Future Improvements
 
