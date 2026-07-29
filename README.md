@@ -1,43 +1,46 @@
-# Agent
-Sandaru Pradeepthi Amarasekara
-**Student ID:** ITBIN-2313-0008
+# 🎵 Music Trajectory Agent
 
-**Module:** IT41043 – Intelligent Systems
-**Faculty:** Faculty of Information Technology, Horizon Campus
+**Student:** Sandaru Pradeepthi Amarasekara  
+**Student ID:** ITBIN-2313-0008  
 
-**🚀 Live Streamlit Application:**
-**https://music-trajectory-agent-asekcppebryfzmqjr6kbty.streamlit.app/**
+**Module:** IT41043 – Intelligent Systems  
+**Faculty:** Faculty of Information Technology, Horizon Campus  
+
+## 🚀 Live Streamlit Application
+
+https://music-trajectory-agent-asekcppebryfzmqjr6kbty.streamlit.app/
 
 ---
 
-# 🎵 Music Trajectory Agent
-## Project Overview
+# Project Overview
 
 Music Trajectory Agent is an AI-based project developed for the **IT41043 – Intelligent Systems** module.
 
 The system analyzes an artist's music career using a custom music dataset and **Retrieval-Augmented Generation (RAG)**. It combines statistical analysis with AI to generate an easy-to-understand interpretation of an artist's career trajectory.
 
-### How It Works – Two AI Agents
+## How It Works – Two AI Agents
 
-**Trajectory Agent**
+### Trajectory Agent
 
-* Analyzes the music dataset.
-* Calculates artist statistics such as YouTube views and career trends.
+- Analyzes the music dataset.
+- Calculates artist statistics such as YouTube views and career trends.
 
-**Interpreter Agent**
+### Interpreter Agent
 
-* Retrieves relevant information from the knowledge base.
-* Uses the Groq LLM to generate an AI-powered explanation of the artist's career.
+- Retrieves relevant information from the knowledge base.
+- Uses the Groq LLM to generate an AI-powered explanation of the artist's career.
 
-### Supported Artists
+## Supported Artists
 
-* Bathiya & Santhush
-* Kasun Kalhara
-* Centigradz
+- Bathiya & Santhush
+- Kasun Kalhara
+- Centigradz
 
-> **Note:** The current version of the application supports analysis for **Bathiya & Santhush**, **Kasun Kalhara**, and **Centigradz** only. Additional artists can be added in future by expanding the dataset and rebuilding the vector database.
+> **Note:** The current version supports only these three artists. More artists can be added in future by expanding the dataset and rebuilding the vector database.
 
-## Features
+---
+
+# Features
 
 - Analyze an artist using a music dataset
 - Display artist statistics
@@ -51,7 +54,7 @@ The system analyzes an artist's music career using a custom music dataset and **
 
 ---
 
-## Technologies Used
+# Technologies Used
 
 - Python
 - Streamlit
@@ -59,25 +62,24 @@ The system analyzes an artist's music career using a custom music dataset and **
 - NumPy
 - LangChain
 - ChromaDB
+- Sentence Transformers
 - Groq API
 - OpenRouter API
-- Sentence Transformers
-
 
 ---
 
-## Known Limitations
+# Known Limitations
 
-- The current version supports only three artists.
-- The dataset is manually created and limited in size.
-- The knowledge base contains a limited number of music-related documents.
-- The system currently analyzes YouTube-based popularity only.
+- Supports only three artists.
+- Dataset is manually created.
+- Knowledge base is limited.
+- Uses YouTube popularity data only.
 
 ---
 
-## Project Structure
+# Project Structure
 
-```
+```text
 music-trajectory-agent/
 
 agents/
@@ -93,6 +95,7 @@ knowledge_base/
 utils/
     analysis.py
     llm.py
+    openrouter_llm.py
     retriever.py
     vector_store.py
     rag.py
@@ -106,31 +109,52 @@ README.md
 
 ---
 
-## How It Works
+# How It Works
 
 1. User enters an artist name.
 2. Trajectory Agent analyzes the dataset.
 3. Retriever searches the knowledge base.
 4. Chroma retrieves relevant documents.
 5. Groq LLM combines statistics with retrieved knowledge.
-6. Streamlit displays the final report.
+6. Streamlit displays the final AI report.
 
-### Agent Communication Diagram
-    User
-     │
-Trajectory Agent
-     │ (artist summary)
-Interpreter Agent
-     │ (retrieved context)
-Groq/OpenRouter
-     │
-Final Response
 ---
 
+# Agent Communication Diagram
 
-## AI Agents
+```text
++--------+
+|  User  |
++--------+
+     |
+     v
++------------------+
+| Trajectory Agent |
++------------------+
+     |
+     | Artist Summary
+     v
++-------------------+
+| Interpreter Agent |
++-------------------+
+     |
+     | Retrieved Context
+     v
++------------------+
+| Groq/OpenRouter  |
++------------------+
+     |
+     v
++------------------+
+|  Final Response  |
++------------------+
+```
 
-### Trajectory Agent
+---
+
+# AI Agents
+
+## Trajectory Agent
 
 Responsible for:
 
@@ -138,7 +162,7 @@ Responsible for:
 - Calculating statistics
 - Detecting career trends
 
-### Interpreter Agent
+## Interpreter Agent
 
 Responsible for:
 
@@ -148,97 +172,106 @@ Responsible for:
 
 ---
 
-## Architecture Diagram
+# Architecture Diagram
 
-User
-
-   │
-
-Streamlit
-
-   │
-   
-Trajectory Agent
-
-   │ (summary)
-   
-Retriever (ChromaDB)
-
-   │ (context)
-   
-Interpreter Agent
-
-   │
-   
-Groq/OpenRouter
-
-   │
-   
-Final Report
+```text
++--------+
+|  User  |
++--------+
+     |
+     v
++----------------+
+|   Streamlit    |
++----------------+
+     |
+     v
++------------------+
+| Trajectory Agent |
++------------------+
+     |
+     | Summary
+     v
++----------------------+
+| Retriever (ChromaDB) |
++----------------------+
+     |
+     | Context
+     v
++-------------------+
+| Interpreter Agent |
++-------------------+
+     |
+     v
++------------------+
+| Groq/OpenRouter  |
++------------------+
+     |
+     v
++------------------+
+|  Final AI Report |
++------------------+
+```
 
 ---
 
----
+# RAG Pipeline Explanation
 
-## RAG Pipeline Explanation
-
-The knowledge base is split into smaller text chunks using LangChain's RecursiveCharacterTextSplitter. These chunks are converted into vector embeddings using Sentence Transformers and stored in ChromaDB. When a user searches for an artist, the Retriever finds the most relevant knowledge, which is combined with the artist statistics by the LLM to generate the final AI-powered report.
+The knowledge base is split into smaller chunks using LangChain's RecursiveCharacterTextSplitter. The chunks are converted into vector embeddings using Sentence Transformers and stored in ChromaDB. When a user searches for an artist, the Retriever finds the most relevant knowledge, which is combined with artist statistics by the LLM to generate the final AI report.
 
 ---
 
+# Installation
 
-## Installation
-
-### 1. Clone the repository
+## 1. Clone the Repository
 
 ```bash
 git clone https://github.com/your-username/music-trajectory-agent.git
 cd music-trajectory-agent
 ```
 
-### 2. Create a virtual environment (Optional but Recommended)
+## 2. Create a Virtual Environment
 
-**Windows**
+### Windows
 
 ```bash
 python -m venv .venv
 .venv\Scripts\activate
 ```
 
-### 3. Install dependencies
+## 3. Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 4. Configure API Keys
+## 4. Configure API Keys
 
-Create a `.env` file or configure **Streamlit Secrets** with your API keys.
-
+Create a `.env` file.
 
 ```text
 GROQ_API_KEY=your_groq_api_key
 OPENROUTER_API_KEY=your_openrouter_api_key
 ```
 
-### 5. Run the application
+## 5. Run the Application
 
 ```bash
 streamlit run app.py
 ```
 
-The application will open in your default browser at:
+Open:
 
-```
+```text
 http://localhost:8501
 ```
 
-## Future Improvements
-
-- Support multiple AI models
-- More advanced visualizations
-- Music recommendation system
-- Spotify API integration
-
 ---
 
+# Future Improvements
+
+- Support more artists
+- Support multiple AI models
+- Improve data visualizations
+- Spotify API integration
+- Music recommendation system
+- Automatic dataset updates
