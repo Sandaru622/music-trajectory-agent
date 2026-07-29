@@ -1,7 +1,16 @@
 import pandas as pd
 
 def analyze_artist(csv_file, artist_name):
+    """
+    Analyze an artist's music statistics from the dataset.
 
+    Parameters:
+        csv_file (str): Path to CSV dataset.
+        artist_name (str): Artist name.
+
+    Returns:
+        dict: Artist statistics.
+    """
     df = pd.read_csv(csv_file)
 
     artist_df = df[df["Artist"] == artist_name]
