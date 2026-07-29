@@ -35,11 +35,14 @@ Artists supported right now:
 
 - Python
 - Streamlit
+- Pandas
+- NumPy
 - LangChain
 - ChromaDB
-- Groq LLM
-- Pandas
+- Groq API
+- OpenRouter API
 - Sentence Transformers
+
 
 ---
 
@@ -109,27 +112,27 @@ Responsible for:
 
 Knowledge Base
 
-↓
+      ↓
 
 Document Chunking
 
-↓
+      ↓
 
 Embeddings
 
-↓
+      ↓
 
 Chroma Vector Database
 
-↓
+      ↓
 
 Retriever
 
-↓
+      ↓
 
 Groq LLM
 
-↓
+      ↓
 
 Final AI Report
 
