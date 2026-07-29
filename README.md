@@ -195,6 +195,47 @@ The knowledge base is split into smaller chunks using LangChain's RecursiveChara
 
 ---
 
+## Agentic Design Patterns
+
+| Pattern                                  | Location                      | Purpose 
+|------------------------------------------|-------------------------------|----------------------------------------- |
+| Planning                                 | `agents/trajectory_agent.py`  | Analyzes artist statistics step by step. |
+| Tool Use                                 | `utils/retriever.py`          | Retrieves relevant knowledge from ChromaDB. |
+| Retrieval-Augmented Generation (RAG)     | `agents/interpreter_agent.py` | Combines retrieved context with LLM responses. |
+
+---
+## Model Comparison
+
+ - Career Interpretation
+       Llama 3.1 8B Instant 
+       Groq 
+       Fast inference and low latency
+ - Alternative LLM
+       Google Gemma 4 26B IT 
+       OpenRouter 
+       Model flexibility and future scalability
+
+---
+
+## Chunking Strategy
+
+- Chunking Method: RecursiveCharacterTextSplitter
+- Chunk Size: 500 characters
+- Chunk Overlap: 50 characters
+
+## Embedding Model
+
+- all-MiniLM-L6-v2 (Sentence Transformers)
+
+---
+
+## Secrets Management
+
+API keys are stored securely using `.env` for local development and Streamlit Secrets for deployment.
+
+---
+
+
 # Installation
 
 ## 1. Clone the Repository
