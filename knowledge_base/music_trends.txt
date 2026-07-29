@@ -1,0 +1,19 @@
+Music popularity depends on many factors including audio features, artist popularity, lyrics, and audience engagement.
+
+Tempo is the speed of a song measured in beats per minute (BPM). Faster songs often create excitement, while slower songs create emotional feelings.
+
+Energy measures how active and intense a song sounds. High-energy songs are commonly used in concerts, festivals, and dance events.
+
+Loudness represents the average volume of a song and is measured in decibels (dB). Proper loudness improves the listening experience.
+
+Song duration can influence listener engagement. Songs between three and five minutes are common in popular music.
+
+Artists who release songs consistently often maintain audience interest over time.
+
+YouTube views are commonly used as an indicator of song popularity, although marketing and social media also influence success.
+
+Machine learning can identify relationships between audio features and music popularity.
+
+Features such as tempo, loudness, energy, and duration are widely used in music analysis.
+
+Music recommendation systems often compare audio features to recommend similar songs.
