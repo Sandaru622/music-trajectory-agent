@@ -1,6 +1,6 @@
 # 🎵 Music Trajectory Agent
 
-** Student:** Sandaru Amarasekara
+Sandaru Pradeepthi Amarasekara
 **Student ID:** ITBIN-2313-0008
 
 **Module:** IT41043 – Intelligent Systems
@@ -214,10 +214,3 @@ http://localhost:8501
 
 ---
 
-## Module
-
-IT41043 – Intelligent Systems
-
-Faculty of Information Technology
-
-Horizon Campus
