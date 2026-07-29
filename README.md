@@ -1,12 +1,17 @@
 # 🎵 Music Trajectory Agent
 
 ## Project Overview
+This is an AI-based project made for the IT41043 – Intelligent Systems module. It looks at an artist's music career using a music dataset and a technique called RAG (Retrieval-Augmented Generation). It mixes number-based analysis with AI to explain how an artist's career has grown or changed over time.
 
-Music Trajectory Agent is an Agentic AI application developed for the IT41043 Intelligent Systems module.
+How it works - Two AI Agents
 
-The system analyzes an artist's music career using a music dataset and Retrieval-Augmented Generation (RAG). It combines statistical analysis with an AI language model to generate an intelligent interpretation of the artist's career trajectory.
+ Trajectory Agent - Looks at the music data and calculates statistics about the artist (like views, streams, trends,etc.)
+ Interpreter Agent - Finds useful information from the knowledge base and uses the Groq LLM (AI model) to write a   clear,easy-to-understand explanation of the artist's career.
 
----
+Artists supported right now:
+-  Bathiya & Santhush
+-  Kasun Kalhara
+-  Centigradz
 
 ## Features
 
