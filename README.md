@@ -123,31 +123,20 @@ README.md
 # Agent Communication Diagram
 
 ```text
-+--------+
-|  User  |
-+--------+
+   User  
      |
-     v
-+------------------+
-| Trajectory Agent |
-+------------------+
-     |
+
+  Trajectory Agent
      | Artist Summary
-     v
-+-------------------+
-| Interpreter Agent |
-+-------------------+
-     |
+     
+   Interpreter Agent 
      | Retrieved Context
-     v
-+------------------+
-| Groq/OpenRouter  |
-+------------------+
+  
+   Groq/OpenRouter  
      |
-     v
-+------------------+
-|  Final Response  |
-+------------------+
+  
+   Final Response  
+
 ```
 
 ---
@@ -175,41 +164,27 @@ Responsible for:
 # Architecture Diagram
 
 ```text
-+--------+
-|  User  |
-+--------+
+
+    User  
      |
-     v
-+----------------+
-|   Streamlit    |
-+----------------+
+
+   Streamlit    
      |
-     v
-+------------------+
-| Trajectory Agent |
-+------------------+
-     |
+     
+  Trajectory Agent 
      | Summary
-     v
-+----------------------+
-| Retriever (ChromaDB) |
-+----------------------+
-     |
+ 
+  Retriever (ChromaDB)  
      | Context
-     v
-+-------------------+
-| Interpreter Agent |
-+-------------------+
+     
+  Interpreter Agent 
      |
-     v
-+------------------+
-| Groq/OpenRouter  |
-+------------------+
+
+  Groq/OpenRouter  
      |
-     v
-+------------------+
-|  Final AI Report |
-+------------------+
+     
+  Final AI Report 
+
 ```
 
 ---
