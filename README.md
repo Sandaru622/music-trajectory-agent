@@ -13,6 +13,10 @@ Artists supported right now:
 -  Kasun Kalhara
 -  Centigradz
 
+
+> **Note:** The current version of the application supports analysis for **Kasun Kalhara**, **Bathiya & Santhush**, and **Centigradz** only. Additional artists can be added in future by expanding the dataset and rebuilding the vector database.
+
+
 ## Features
 
 - Analyze an artist using a music dataset
