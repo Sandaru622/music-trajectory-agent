@@ -22,7 +22,10 @@ def analyze_artist(csv_file, artist_name):
         "latest_year": int(artist_df["Release Year"].max()),
         "highest_views": int(artist_df["Youtube Views"].max()),
         "lowest_views": int(artist_df["Youtube Views"].min()),
-        "average_views": int(artist_df["Youtube Views"].mean())
+        "average_views": int(artist_df["Youtube Views"].mean()),
+        "career_span": int(
+            artist_df["Release Year"].max() - artist_df["Release Year"].min()
+        )
     }
 
     summary["chart_data"] = artist_df
