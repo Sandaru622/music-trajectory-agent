@@ -90,7 +90,7 @@ if st.button("Analyze"):
                     f"{summary['average_views']:,}"
                 )
 
-            col4, col5, col6 = st.columns(3)
+            col4, col5, col6, col7 = st.columns(4)
 
             with col4:
                 st.metric("First Release", summary["first_year"])
@@ -99,6 +99,12 @@ if st.button("Analyze"):
                 st.metric("Latest Release", summary["latest_year"])
 
             with col6:
+                st.metric(
+                    "Career Span",
+                    f"{summary['career_span']} Years"
+                )
+
+            with col7:
                 st.metric("Trend", summary["trend"])
 
             st.divider()
