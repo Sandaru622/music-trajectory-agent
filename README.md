@@ -1,21 +1,41 @@
 # 🎵 Music Trajectory Agent
 
+** Student:** Sandaru Amarasekara
+**Student ID:** ITBIN-2313-0008
+
+**Module:** IT41043 – Intelligent Systems
+**Faculty:** Faculty of Information Technology, Horizon Campus
+
+**🚀 Live Streamlit Application:**
+**https://music-trajectory-agent-asekcppebryfzmqjr6kbty.streamlit.app/**
+
+---
+# 🎵 Music Trajectory Agent
 ## Project Overview
-This is an AI-based project made for the IT41043 – Intelligent Systems module. It looks at an artist's music career using a music dataset and a technique called RAG (Retrieval-Augmented Generation). It mixes number-based analysis with AI to explain how an artist's career has grown or changed over time.
 
-How it works - Two AI Agents
+Music Trajectory Agent is an AI-based project developed for the **IT41043 – Intelligent Systems** module.
 
- Trajectory Agent - Looks at the music data and calculates statistics about the artist (like views, streams, trends,etc.)
- Interpreter Agent - Finds useful information from the knowledge base and uses the Groq LLM (AI model) to write a   clear,easy-to-understand explanation of the artist's career.
+The system analyzes an artist's music career using a custom music dataset and **Retrieval-Augmented Generation (RAG)**. It combines statistical analysis with AI to generate an easy-to-understand interpretation of an artist's career trajectory.
 
-Artists supported right now:
--  Bathiya & Santhush
--  Kasun Kalhara
--  Centigradz
+### How It Works – Two AI Agents
 
+**Trajectory Agent**
 
-> **Note:** The current version of the application supports analysis for **Kasun Kalhara**, **Bathiya & Santhush**, and **Centigradz** only. Additional artists can be added in future by expanding the dataset and rebuilding the vector database.
+* Analyzes the music dataset.
+* Calculates artist statistics such as YouTube views and career trends.
 
+**Interpreter Agent**
+
+* Retrieves relevant information from the knowledge base.
+* Uses the Groq LLM to generate an AI-powered explanation of the artist's career.
+
+### Supported Artists
+
+* Bathiya & Santhush
+* Kasun Kalhara
+* Centigradz
+
+> **Note:** The current version of the application supports analysis for **Bathiya & Santhush**, **Kasun Kalhara**, and **Centigradz** only. Additional artists can be added in future by expanding the dataset and rebuilding the vector database.
 
 ## Features
 
@@ -88,6 +108,7 @@ README.md
 
 ---
 
+
 ## AI Agents
 
 ### Trajectory Agent
@@ -110,31 +131,31 @@ Responsible for:
 
 ## RAG Pipeline
 
-Knowledge Base
+User
 
-      ↓
+   │
 
-Document Chunking
+Streamlit
 
-      ↓
+   │
+   
+Trajectory Agent
 
-Embeddings
+   │ (summary)
+   
+Retriever (ChromaDB)
 
-      ↓
+   │ (context)
+   
+Interpreter Agent
 
-Chroma Vector Database
+   │
+   
+Groq/OpenRouter
 
-      ↓
-
-Retriever
-
-      ↓
-
-Groq LLM
-
-      ↓
-
-Final AI Report
+   │
+   
+Final Report
 
 ---
 
