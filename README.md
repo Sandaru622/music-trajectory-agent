@@ -1,5 +1,4 @@
-# 🎵 Music Trajectory Agent
-
+# Agent
 Sandaru Pradeepthi Amarasekara
 **Student ID:** ITBIN-2313-0008
 
@@ -10,6 +9,7 @@ Sandaru Pradeepthi Amarasekara
 **https://music-trajectory-agent-asekcppebryfzmqjr6kbty.streamlit.app/**
 
 ---
+
 # 🎵 Music Trajectory Agent
 ## Project Overview
 
@@ -66,6 +66,15 @@ The system analyzes an artist's music career using a custom music dataset and **
 
 ---
 
+## Known Limitations
+
+- The current version supports only three artists.
+- The dataset is manually created and limited in size.
+- The knowledge base contains a limited number of music-related documents.
+- The system currently analyzes YouTube-based popularity only.
+
+---
+
 ## Project Structure
 
 ```
@@ -106,6 +115,16 @@ README.md
 5. Groq LLM combines statistics with retrieved knowledge.
 6. Streamlit displays the final report.
 
+### Agent Communication Diagram
+    User
+     │
+Trajectory Agent
+     │ (artist summary)
+Interpreter Agent
+     │ (retrieved context)
+Groq/OpenRouter
+     │
+Final Response
 ---
 
 
@@ -129,7 +148,7 @@ Responsible for:
 
 ---
 
-## RAG Pipeline
+## Architecture Diagram
 
 User
 
@@ -158,6 +177,15 @@ Groq/OpenRouter
 Final Report
 
 ---
+
+---
+
+## RAG Pipeline Explanation
+
+The knowledge base is split into smaller text chunks using LangChain's RecursiveCharacterTextSplitter. These chunks are converted into vector embeddings using Sentence Transformers and stored in ChromaDB. When a user searches for an artist, the Retriever finds the most relevant knowledge, which is combined with the artist statistics by the LLM to generate the final AI-powered report.
+
+---
+
 
 ## Installation
 
