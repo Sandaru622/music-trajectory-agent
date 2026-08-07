@@ -123,19 +123,56 @@ README.md
 # Agent Communication Diagram
 
 ```text
-   User  
-     |
+  User
+   │
+   
+Trajectory Agent
+   │
 
-  Trajectory Agent
-     | Artist Summary
-     
-   Interpreter Agent 
-     | Retrieved Context
-  
-   Groq/OpenRouter  
-     |
-  
-   Final Response  
+Reads songs.csv
+   │
+
+Calculates Statistics
+   │
+
+Artist Summary
+   │
+   
+Interpreter Agent
+   │
+
+Creates Search Query
+   │
+   
+Retriever
+   │
+   
+ChromaDB
+   │
+   
+Knowledge Base
+   │
+
+Relevant Chunks
+   │
+   
+Prompt
+   │
+   
+Groq LLM
+   │
+Draft Response
+   │
+   
+OpenRouter LLM
+   │
+Improved Response
+   │
+   
+Return Final Answer
+   │
+   
+Streamlit
 
 ```
 
