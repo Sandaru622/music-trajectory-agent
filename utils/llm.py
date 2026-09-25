@@ -7,8 +7,9 @@ load_dotenv()
 
 groq_api_key = st.secrets.get("GROQ_API_KEY") or os.getenv("GROQ_API_KEY")
 
+# 100% stable active Groq model name
 llm = ChatGroq(
-    model_name="llama-3.3-70b-versatile",
-    api_key=groq_api_key,
+    model="llama-3.1-8b-instant",
+    groq_api_key=groq_api_key,
     temperature=0.3
 )
